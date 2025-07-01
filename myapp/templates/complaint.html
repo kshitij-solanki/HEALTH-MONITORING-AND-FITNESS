@@ -1,0 +1,55 @@
+{%extends 'base.html'%}
+{%block main%}
+{%load static%}
+{%include 'messages.html'%}
+
+  <section class="inner-banner pattern-3">
+	<div class="container text-center">
+		<h2>Complaint</h2>
+
+	</div>
+</section>
+<section class="bread-cumb">
+	<div class="container text-center">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><span>Complaint</span></li>
+		</ul>
+	</div>
+</section>
+
+<section class="w3l-form1 py-5">
+	<div class="container p-5">
+		<div class="row justify-content-center" style="padding:50px 0px;">
+			<div class="col-lg-8">
+				<div class="card shadow-sm border"><br><br>
+					<div>
+						<h4 align="center">Complaint</h4>
+					</div>
+					<div class="card-body">
+						<form method="post" action="/complaint_submit" style="width:100%; box-shadow:1px 1px 0px black; margin:0 auto; padding:20px;">
+							{% csrf_token %}
+
+							<div class="form-group mb-3">
+								<label for="subject" class="form-label">Subject</label>
+								<input type="text" name="subject1" id="subject" class="form-control" placeholder="Enter Subject" required>
+							</div>
+
+							<div class="form-group mb-4">
+								<label for="description" class="form-label">Description</label>
+								<textarea name="description1" id="description" class="form-control" rows="5" placeholder="Describe your issue here..." required></textarea>
+							</div>
+
+							<div class="text-center">
+								<button type="submit" class="search-button" style="background-color: #FF9D23; color: white; border: none; padding: 10px 15px; cursor: pointer;">Submit Complaint</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+        <!-- login area end -->
+     {%endblock%}

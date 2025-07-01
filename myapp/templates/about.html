@@ -1,0 +1,79 @@
+{%extends 'base.html'%}
+{%block main%}
+{%load static%}
+{%include 'messages.html'%}
+    <section class="inner-banner pattern-3">
+        <div class="container text-center">
+            <h2>About us</h2>
+
+        </div>
+    </section>
+    <section class="bread-cumb">
+        <div class="container text-center">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><span>About Us</span></li>
+            </ul>
+        </div>
+    </section>
+    <section class="fitness-video-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="video-box">
+                        <div class="inner-box">
+                            <ul class="img-list">
+                                <li class="active" data-video-img="img/video-gallery/main-1.jpg" data-video-url="https://www.youtube.com/watch?v=KssOT2QVg-M"><img src=" {% static 'img/video-gallery/thumb-1.jpg' %} " alt="" /></li>
+                                <li data-video-img="img/video-gallery/main-2.jpg" data-video-url="https://www.youtube.com/watch?v=WYbEt5AVMF8"><img src=" {% static 'img/video-gallery/thumb-2.jpg' %} " alt="" /></li>
+                                <li data-video-img="img/video-gallery/main-3.jpg" data-video-url="https://www.youtube.com/watch?v=k0ZvG_917YI"><img src=" {% static 'img/video-gallery/thumb-3.jpg' %} " alt="" /></li>
+                            </ul>
+                            <div class="main-box">
+                                <div class="img-box">
+                                    <img src=" {% static 'img/video-gallery/main-1.jpg' %} " alt="Awesome Image" />
+                                    <div class="overlay">
+                                        <div class="box-content">
+                                            <div class="content">
+                                                <a class="play-video video-fancybox" href="#"><img src=" {% static 'img/resources/video-play.png' %} " alt="Awesome Image" /></a>
+                                            </div>
+                                            <!-- /.content -->
+                                        </div>
+                                        <!-- /.box-content -->
+                                    </div>
+                                    <!-- /.overlay -->
+                                </div>
+                                <!-- /.img-box -->
+                            </div>
+                            <!-- /.main-box -->
+                            <ul class="navigation vid-nav">
+                                <li><a data-dir="prev" href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li><a data-dir="next" href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                            <!-- /.navigation -->
+                        </div>
+                        <!-- /.inner-box -->
+                    </div>
+                    <!-- /.video-box -->
+                </div>
+                <!-- /.col-md-7 -->
+                <div class="col-md-5">
+                    <div class="right-text">
+                        <h3>Video Gallery : fitness Care Trainers Workouts.</h3>
+                        <p class="highlighted">We have found the best workouts from around the world and put them in one database that you can search by days per week, type of program, and much more! </p>
+                        <br />
+                        <p>Many workouts accomplish different goals at the same time. For example, a muscle building workout will almost always help build strength at the same time. Choose the goal that is MOST important to you, and the workouts that are shown will be geared more toward your chosen goal. </p>
+                        <br />
+                        <p>A Split Bodypart Routine means that you work different body parts on different days. For example, one workout might have you work biceps and chest on one day, then triceps and back on a different day. This is the most common type of workout program.</p>
+                        <br />
+                        <h4>YOUR SUCCESS IS OUR PASSION</h4>
+                    </div>
+                    <!-- /.right-text -->
+                </div>
+                <!-- /.col-md-7 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+   {%endblock%}

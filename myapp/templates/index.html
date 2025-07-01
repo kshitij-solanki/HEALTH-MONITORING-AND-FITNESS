@@ -1,0 +1,92 @@
+{%extends 'base.html'%}
+{%block main%}
+{%load static%}
+{%include 'messages.html'%}
+
+    <section class="rev_slider_wrapper">
+        <div id="slider1" class="rev_slider" data-version="5.0">
+            <ul>
+                <li data-transition="random">
+                    <img src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1">
+                    <div class="tp-caption tp-resizeme banner-caption-h1" data-x="center" data-hoffset="0" data-y="top" data-voffset="385" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-splitin="none" data-splitout="none" data-start="500">
+                        Buy World’s Best
+                    </div>
+                    <div class="tp-caption  tp-resizeme banner-caption-h1" data-x="center" data-hoffset="0" data-y="top" data-voffset="480" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-start="1500">
+                        Supliments From Our Site
+                    </div>
+                    <div class="tp-caption tp-resizeme banner-caption-h1-large banner-caption-bg" data-x="center" data-hoffset="0" data-y="top" data-voffset="570" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-start="2000">
+                        <span><img src=" {% static 'img/slides/title-decor.png' %} " alt=""> Fitness Care</span>
+                    </div>
+                </li>
+                <li data-transition="random">
+                    <img src="https://images.pexels.com/photos/6740821/pexels-photo-6740821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" width="1920" height="705" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2">
+                    <div class="tp-caption tp-resizeme banner-caption-h1" data-x="right" data-hoffset="0" data-y="top" data-voffset="385" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-splitin="none" data-splitout="none" data-start="500">
+                        Awesome fitness Gym
+                    </div>
+                    <div class="tp-caption  tp-resizeme banner-caption-h1" data-x="right" data-hoffset="0" data-y="top" data-voffset="480" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-start="1000">
+                        Buy Best Gym Equipments
+                    </div>
+                    <div class="tp-caption  tp-resizeme banner-caption-h1-large banner-caption-bg" data-x="right" data-hoffset="15" data-y="top" data-voffset="570" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-start="1500">
+                        <span><img src=" {% static 'img/slides/title-decor.png' %} " alt=""> Don't Miss it</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+{%if productdata%}
+    <section class="popular-shop-item mixit-gallery section-padding pt-5">
+        <div class="container">
+           <div class="section-title text-center">
+                <h1><span>Benifits of Fitness Care GYM</span></h1>
+               <br></br>
+               <p><img src="/static/img/picss/man-2604149_1280.jpg"  height="240px" width="500px" align="left"/><b>    <p>      Going to the gym offers a wide range of benefits that can positively impact both your body and mind. Regular exercise helps improve overall physical health by enhancing strength, endurance, flexibility, and cardiovascular function. It supports weight management and contributes to stronger bones and a more resilient immune system. Beyond the physical, working out can significantly boost mental well-being by reducing stress, anxiety, and symptoms of depression, while also improving focus, memory, and sleep quality. The gym environment provides motivation through community support, access to professional equipment, and structured routines that help build discipline and consistency. Altogether, incorporating gym sessions into your lifestyle promotes a healthier, more confident, and balanced version of yourself.</p></b></p>
+            </div>
+            <!-- /.clearfix -->
+            <div class="row">
+                <div class="section-title text-center">
+                      <h1><span>OUR PRODUCTS</span></h1>
+                </div>
+                {% for i in productdata%}
+                <div class="col-md-4 col-sm-6 mix popular">
+                    <div class="single-product-item text-center">
+                        <div class="img-holder">
+                            <img alt="" src="{{i.image1.url}}" height="300px" width="200px">
+                            <div class="overlay">
+                                <div class="icon-holder">
+
+                                </div>
+                                <!-- /.icon-holder -->
+                            </div>
+                            <!-- /.overlay -->
+                        </div>
+                        <!-- /.img-holder -->
+                        {%if request.session.log_id%}
+                        <div class="title">
+
+
+
+
+                            <a href="/ecommerce-single/{{ i.id }}"><h3>{{i.name}}</h3></a>
+                            <h2 class="before-rate">{{i.price}}</h2>
+                        </div>
+                        {%else%}
+                        <div class="title">
+
+                            <a href="/login"><h3>{{i.name}}</h3></a>
+                            <h2 class="before-rate"><b>₹</b>{{i.price}}</h2>
+                        </div>
+                        {%endif%}
+                        <!-- /.title -->
+                    </div>
+                    <!-- /.single-product-item text-center -->
+                </div>
+                {%endfor%}
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+{%endif%}
+{%endblock%}

@@ -1,0 +1,61 @@
+{%extends 'base.html'%}
+{%block main%}
+{%load static%}
+{%include 'messages.html'%}
+
+    
+    <section class="inner-banner pattern-3">
+        <div class="container text-center">
+            <h2>ALL PRODUCTS</h2>
+
+        </div>
+    </section>
+    <section class="bread-cumb">
+        <div class="container text-center">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><span>ALL PRODUCTS</span></li>
+            </ul>
+        </div>
+    </section>
+    <section class="popular-shop-item  section-padding">
+        <div class="container">
+            <div class="row">
+                {% for i in equipmentsdata %}
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="single-product-item text-center">
+                        <div class="img-holder" >
+                            <a href="/ecommerce-single/{{ i.id }}" class="btn btn-secondary"></a>
+                            <img alt=""  src="{{i.image1.url}}">
+                            <div class="overlay">
+                                <div class="icon-holder">
+
+                                </div>
+                                <!-- /.icon-holder -->
+                            </div>
+                            <!-- /.overlay -->
+                        </div>
+                        <!-- /.img-holder -->
+                        <div class="title">
+                            <a href="/ecommerce-single/{{ i.id }}"><h3>{{i.name}} </h3></a>
+                            <h2><del class="before-rate"></del>{{i.price}}</h2>
+                        </div>
+                        {%if request.session.log_id%}
+                        {%if profile != None%}
+                        <div class="card-footer bg-transparent border-0"><a href="/ecommerce-single/{{ i.id }}" class="btn btn-secondary">View Detail</a></div>
+                        {%else%}
+                        <div class="card-footer bg-transparent border-0"><a href="/adduser" class="btn btn-secondary">View Detail</a></div>
+                        {%endif%}
+                        {%endif%}
+                        <!-- /.title -->
+                    </div>
+                    <!-- /.single-product-item text-center -->
+                </div>
+                {%endfor%}
+                <!-- /.col-md-4 -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.popular-shop-item -->
+{%endblock%}
